@@ -1,7 +1,12 @@
 # config.py
 
-# Clave API para NewsAPI
-NEWS_API_KEY = "58ce8813cb324f67894ffd6325c5ea45"
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+
 
 # URLs relevantes
 RSS_FEEDS = [

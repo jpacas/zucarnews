@@ -1,6 +1,7 @@
 # apis.py
 
 import requests
+from config import NEWS_API_KEY
 
 def fetch_news_from_api(query, api_key):
     """Obtiene noticias usando NewsAPI."""
@@ -9,7 +10,7 @@ def fetch_news_from_api(query, api_key):
         "q": query,
         "language": "es",
         "sortBy": "publishedAt",
-        "apiKey": api_key,
+        "apiKey": NEWS_API_KEY,
     }
     response = requests.get(url, params=params)
 
